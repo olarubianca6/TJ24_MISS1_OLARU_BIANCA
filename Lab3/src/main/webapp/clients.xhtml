@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Client Management</title>
+</h:head>
+<h:body>
+    <h:form>
+        <p:panel header="Add Client">
+            <h:outputLabel for="name" value="Name:" />
+            <h:inputText id="name" value="#{clientBean.client.name}" />
+
+            <h:outputLabel for="requestedProducts" value="Requested Products:" />
+            <h:inputText id="requestedProducts" value="#{clientBean.client.requestedProducts}" />
+
+            <p:commandButton value="Add Client" action="#{clientBean.addClient}" update=":clientList" />
+        </p:panel>
+
+        <p:dataTable id="clientList" value="#{clientBean.clients}" var="client">
+            <p:column headerText="Name">
+                #{client.name}
+            </p:column>
+            <p:column headerText="Requested Products">
+                #{client.requestedProducts}
+            </p:column>
+        </p:dataTable>
+    </h:form>
+</h:body>
+</html>

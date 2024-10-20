@@ -1,0 +1,47 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+  <display-name>Lab2</display-name>
+
+  <servlet>
+    <servlet-name>FileUploadServlet</servlet-name>
+    <servlet-class>com.example.FileUploadServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>FileUploadServlet</servlet-name>
+    <url-pattern>/upload</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CaptchaServlet</servlet-name>
+    <servlet-class>com.example.CaptchaServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CaptchaServlet</servlet-name>
+    <url-pattern>/init</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>input.jsp</welcome-file>
+  </welcome-file-list>
+
+  <context-param>
+    <param-name>prelude</param-name>
+    <param-value>Start of the file content</param-value>
+  </context-param>
+  <context-param>
+    <param-name>coda</param-name>
+    <param-value>End of the file content</param-value>
+  </context-param>
+
+</web-app>
+

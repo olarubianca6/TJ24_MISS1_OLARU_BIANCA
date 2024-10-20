@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Servlets Application</title>
+</head>
+<body>
+
+<h2>String to Character List</h2>
+<form action="http://localhost:8080/Servlets/stringToList" method="post">
+  <label for="inputString">Enter a String:</label>
+  <input type="text" name="input" id="inputString" placeholder="Enter a String" required>
+  <input type="submit" value="Submit">
+</form>
+
+<h2>Adjacency Matrix</h2>
+<form action="http://localhost:8080/Servlets/adjacencyMatrix" method="post">
+  <label for="inputNumVertices">Number of Vertices:</label>
+  <input type="number" name="numVertices" id="inputNumVertices" required>
+
+  <label for="inputNumEdges">Number of Edges:</label>
+  <input type="number" name="numEdges" id="inputNumEdges" required>
+
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
