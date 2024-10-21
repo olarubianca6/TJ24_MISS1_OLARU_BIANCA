@@ -20,7 +20,7 @@ public class ClientBean {
         em.getTransaction().begin();
         em.persist(client);
         em.getTransaction().commit();
-        client = new Client(); // Reset the client object
+        client = new Client();
         loadClients();
     }
 
