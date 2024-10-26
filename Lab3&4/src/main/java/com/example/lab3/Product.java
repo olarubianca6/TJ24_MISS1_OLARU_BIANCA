@@ -1,9 +1,21 @@
 package com.example.lab3;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="products")
 public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(nullable = false, length = 100)
     private String name;
+
+    @Column(length = 255)
     private String description;
+
+    @Column(nullable = false)
     private int price;
 
     public Product() {}

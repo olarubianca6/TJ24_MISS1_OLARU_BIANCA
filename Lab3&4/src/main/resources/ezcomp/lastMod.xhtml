@@ -1,0 +1,15 @@
+<html   xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:composite="http://xmlns.jcp.org/jsf/composite">
+
+    <composite:interface>
+        <composite:attribute name="timestamp" required="true" />
+        <composite:attribute name="user" required="true" />
+    </composite:interface>
+
+    <composite:implementation>
+            <h:outputText value="Last modified by: #{cc.attrs.user} " />
+            <h:outputText value="on #{cc.attrs.timestamp}" />
+    </composite:implementation>
+
+</html>
