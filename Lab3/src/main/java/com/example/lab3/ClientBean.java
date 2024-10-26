@@ -42,11 +42,4 @@ public class ClientBean {
         return clients;
     }
 
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
-    }
 }

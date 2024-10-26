@@ -29,7 +29,6 @@ public class Client {
         this.name = name;
     }
 
-
     public String getRequestedProducts() {
         return requestedProducts;
     }

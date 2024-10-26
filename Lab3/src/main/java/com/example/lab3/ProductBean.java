@@ -14,6 +14,8 @@ import java.util.List;
 @RequestScoped
 public class ProductBean {
     private List<Product> products;
+    private Product selectedProduct;
+    private ProductService productService = new ProductService();
 
     @PostConstruct
     public void init() {
@@ -42,5 +44,25 @@ public class ProductBean {
 
     public List<Product> getProducts() {
         return products;
+    }
+
+    public Product getSelectedProduct() {
+        return selectedProduct;
+    }
+
+    public void setSelectedProduct(Product selectedProduct) {
+        this.selectedProduct = selectedProduct;
+    }
+
+    public String editProduct(Product product) {
+        this.selectedProduct = product;
+        return "dataEdit.xhtml";
+    }
+
+    public String saveProduct() {
+        if (selectedProduct != null) {
+            productService.updateProduct(selectedProduct);
+        }
+        return "dataView.xhtml";
     }
 }
