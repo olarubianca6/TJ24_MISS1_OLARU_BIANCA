@@ -4,6 +4,7 @@
                                  http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
     <persistence-unit name="Lab3PU" transaction-type="JTA">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <jta-data-source>java:/comp/env/jdbc/products</jta-data-source>
 
         <class>com.example.lab3.Product</class>

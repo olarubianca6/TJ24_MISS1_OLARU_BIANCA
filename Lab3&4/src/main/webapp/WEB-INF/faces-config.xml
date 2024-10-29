@@ -18,22 +18,22 @@
     </managed-bean>
 
     <navigation-rule>
-        <from-view-id>/dataView.xhtml</from-view-id>
+        <from-view-id>/lab4/dataView.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>edit</from-outcome>
-            <to-view-id>/dataEdit.xhtml</to-view-id>
+            <to-view-id>/lab4/dataEdit.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
             <from-outcome>save</from-outcome>
-            <to-view-id>/dataEdit.xhtml</to-view-id>
+            <to-view-id>/lab4/dataEdit.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 
     <navigation-rule>
-        <from-view-id>/dataEdit.xhtml</from-view-id>
+        <from-view-id>/lab4/dataEdit.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>cancel</from-outcome>
-            <to-view-id>/dataView.xhtml</to-view-id>
+            <to-view-id>/lab4/dataView.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 

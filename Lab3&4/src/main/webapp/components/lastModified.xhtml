@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:cc="http://xmlns.jcp.org/jsf/composite">
+
+    <cc:interface>
+        <cc:attribute name="lastModifiedBy" required="true" />
+        <cc:attribute name="lastModifiedDate" required="true" />
+    </cc:interface>
+
+    <cc:implementation>
+        <h:panelGroup>
+            <h:outputText value="Last Modified By: #{cc.attrs.lastModifiedBy}" />
+            <h:outputText value=" on " />
+            <h:outputText value="#{cc.attrs.lastModifiedDate}" />
+        </h:panelGroup>
+    </cc:implementation>
+</ui:composition>
