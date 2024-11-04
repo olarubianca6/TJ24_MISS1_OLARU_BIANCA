@@ -4,11 +4,12 @@
                                  http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
     <persistence-unit name="Lab3PU" transaction-type="JTA">
+
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
         <jta-data-source>java:/comp/env/jdbc/products</jta-data-source>
 
-        <class>com.example.lab3.Product</class>
-        <class>com.example.lab3.Client</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
 
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="create"/>
