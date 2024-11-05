@@ -1,5 +1,8 @@
-package com.example.lab3;
+package com.example.lab3.beans;
 
+import com.example.lab3.DatabaseConnection;
+import com.example.lab3.entities.Product;
+import com.example.lab3.services.ProductService;
 import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Named;

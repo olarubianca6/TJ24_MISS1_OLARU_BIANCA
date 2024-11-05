@@ -7,13 +7,13 @@
 
     <managed-bean>
         <managed-bean-name>productBean</managed-bean-name>
-        <managed-bean-class>com.example.lab3.ProductBean</managed-bean-class>
+        <managed-bean-class>com.example.lab3.beans.ProductBean</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
 
     <managed-bean>
         <managed-bean-name>clientBean</managed-bean-name>
-        <managed-bean-class>com.example.lab3.ClientBean</managed-bean-class>
+        <managed-bean-class>com.example.lab3.beans.ClientBean</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
 

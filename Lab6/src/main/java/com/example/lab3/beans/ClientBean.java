@@ -1,5 +1,6 @@
-package com.example.lab3;
+package com.example.lab3.beans;
 
+import com.example.lab3.entities.Client;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;

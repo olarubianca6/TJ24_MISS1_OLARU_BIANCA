@@ -1,5 +1,6 @@
-package com.example.lab3;
+package com.example.lab3.services;
 
+import com.example.lab3.entities.Product;
 import jakarta.annotation.Resource;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.enterprise.inject.Produces;

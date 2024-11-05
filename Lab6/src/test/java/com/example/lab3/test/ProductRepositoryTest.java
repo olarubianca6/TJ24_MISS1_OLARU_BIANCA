@@ -1,7 +1,7 @@
 package com.example.lab3.test;
 
-import com.example.lab3.ProductRepository;
-import com.example.lab3.Product;
+import com.example.lab3.repositories.ProductRepository;
+import com.example.lab3.entities.Product;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -45,7 +45,7 @@ public class ProductRepositoryTest {
     public void testSaveProduct() {
         Product product = new Product();
         product.setName("Sample Product");
-        product.setPrice(120);
+        product.setPrice(100);
 
         productRepository.save(product);
         em.flush();

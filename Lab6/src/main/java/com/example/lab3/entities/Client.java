@@ -1,6 +1,7 @@
-package com.example.lab3;
+package com.example.lab3.entities;
 
 import jakarta.persistence.*;
+import java.util.List;
 
 
 @Entity
@@ -10,7 +11,9 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String requestedProducts;
+
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
+    private List<Order> orders;
 
     public Long getId() {
         return id;
@@ -28,11 +31,11 @@ public class Client {
         this.name = name;
     }
 
-    public String getRequestedProducts() {
-        return requestedProducts;
+    public List<Order> getOrders() {
+        return orders;
     }
 
-    public void setRequestedProducts(String requestedProducts) {
-        this.requestedProducts = requestedProducts;
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 }

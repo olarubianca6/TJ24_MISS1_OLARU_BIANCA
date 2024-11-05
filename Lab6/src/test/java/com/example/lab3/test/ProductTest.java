@@ -1,7 +1,7 @@
 package com.example.lab3.test;
 
-import com.example.lab3.Product;
-import com.example.lab3.ProductService;
+import com.example.lab3.entities.Product;
+import com.example.lab3.services.ProductService;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;

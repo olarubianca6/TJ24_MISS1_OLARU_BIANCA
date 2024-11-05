@@ -1,5 +1,6 @@
-package com.example.lab3;
+package com.example.lab3.repositories;
 
+import com.example.lab3.entities.Product;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
