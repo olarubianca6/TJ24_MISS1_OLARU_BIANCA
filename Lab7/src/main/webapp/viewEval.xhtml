@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>View Evaluations</title>
+</h:head>
+<h:body>
+    <h:dataTable value="#{evaluationViewBean.evaluations}" var="evaluation">
+        <h:column>
+            <f:facet name="header">Teacher</f:facet>
+            #{evaluation.teacher.name}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Activity</f:facet>
+            #{evaluation.activity}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Type</f:facet>
+            #{evaluation.activityType}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Grade</f:facet>
+            #{evaluation.grade}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Comment</f:facet>
+            #{evaluation.comment}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Submitted On</f:facet>
+            #{evaluation.timestamp}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Registration #</f:facet>
+            #{evaluation.registrationNumber}
+        </h:column>
+    </h:dataTable>
+</h:body>
+</html>
