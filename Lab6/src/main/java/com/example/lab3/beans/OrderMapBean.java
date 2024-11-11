@@ -1,15 +1,15 @@
-package com.example.lab3;
+package com.example.lab3.beans;
 
 import com.example.lab3.entities.Order;
 import jakarta.ejb.Singleton;
 import jakarta.ejb.Startup;
+import jakarta.ejb.DependsOn;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Singleton
 @Startup
+@DependsOn("OrderManagerBean")
 public class OrderMapBean {
     private final Map<Long, Order> orders = new HashMap<>();
 
@@ -21,9 +21,4 @@ public class OrderMapBean {
         orders.remove(orderId);
     }
 
-    public List<Order> getOrdersByClientId(Long clientId) {
-        return orders.values().stream()
-                .filter(order -> order.getClient().getId().equals(clientId))
-                .collect(Collectors.toList());
-    }
 }
